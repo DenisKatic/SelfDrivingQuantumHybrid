@@ -29,8 +29,8 @@
         "early_stopping_patience": 30,
         "early_stopping_min_delta": 0,
         "model_training_epoche": 100,
-        "trainable": true,
-        "hybrid": false,
-        "qml_trainable": true
+        "trainable": false,
+        "hybrid": true,
+        "qml_trainable": false
     }
 }

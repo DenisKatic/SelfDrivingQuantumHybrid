@@ -90,7 +90,7 @@ python3.7 main.py --env_params env_settings.json --original_model output/models/
 --hybrid_types 1,2 --n_threads 1 --training_flag true --training_folder training_data_folder
 ```
 
-For classic model
+# For classic ml
 
 The env_settings.json file must be modified:
 ```
@@ -107,12 +107,13 @@ python3.7 main.py--env_params env_settings.json --training_flag true --training_
 Test the first quantum hybrid model that is defined in the trained_quantum_circuits.json file with some sample images 
 
 Note: The trained_quantum_circuits.json file contains the model path!
+
 Note: The env_settings.json file must be modified for testing. 
 The qml_trainable parameters also defines, if the trainings weights of the trained_quantum_circuits.json file should be used or not.
 ```
 "trainable": false,                     # this flag defines whether the weights of the classic ml should be changed  
 "hybrid": true,                         # defines if a hybrid model should be trained or not
-"qml_trainable": true                  # defines if the parameters of the hybrid model should be changed or not
+"qml_trainable": false                  # defines if the parameters of the hybrid model should be changed or not
 ```
 
 Command:
@@ -131,4 +132,32 @@ By adding the parameter plot_output_folder, the plots are saved in this folder a
 python3.7 main.py --env_params env_settings.json --test_data_folder test --trained_quantum_circuits 
 trained_quantum_circuits.json --trained_quantum_circuits_index 1 --original_model 
 output/models/normal/top_model.46-0.0013866-0.0001746.h5 --plot_output_folder output/plots
+```
+
+# Test model on the simulation
+Test the first quantum hybrid model that is defined in the trained_quantum_circuits.json file on the unreal engine simulation. 
+
+Note: The trained_quantum_circuits.json file contains the model path!
+
+Note: The env_settings.json file must be modified for testing. 
+The qml_trainable parameters also defines, if the trainings weights of the trained_quantum_circuits.json file should be used or not.
+```
+"trainable": false,                     # this flag defines whether the weights of the classic ml should be changed  
+"hybrid": true,                         # defines if a hybrid model should be trained or not
+"qml_trainable": false                  # defines if the parameters of the hybrid model should be changed or not
+```
+The env_settings.json file contains the AirSim parameters that are important for the simulation
+```
+    "env_params": {
+        "ai_car_sim_ip": "127.0.0.3",
+        "ai_car_sim_port": 41451,
+```
+When you start the simulation for the first time, a .. \\ Documents \\ AirSim folder is created (under Windows). 
+Here the settings.json file must be exchanged with the AirSim_settings.json. As soon as the game is restarted, 
+it reads the new settings.json and our code can then connect. 
+
+Command
+```
+python3.7 main.py --env_params env_settings.json --trained_quantum_circuits 
+trained_quantum_circuits.json --trained_quantum_circuits_index 1 --driving_flag true
 ```
