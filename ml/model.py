@@ -278,6 +278,7 @@ class DeepLearningModel():
 
         else:
             # Add a few dense layers to finish the model
+            print("classic model architecture is used")
             merged = Dense(self.values.dense_0_units, activation=self.values.activation_function, name='dense0')(merged)
             merged = Dropout(self.values.dense_0_dropout)(merged)
             merged = Dense(self.values.dense_1_units, activation=self.values.activation_function, name='dense2')(merged)
