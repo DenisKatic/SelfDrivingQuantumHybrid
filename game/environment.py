@@ -173,7 +173,7 @@ class Environment():
             self.prepare_deep_learning_model(without_model=True)
         self.deep_learning_model.start_training(epoch)
 
-    def start_test(self, test_folder, original_model=None):
+    def start_test(self, test_folder, original_model=None, output_plots_folder=None):
         if not test_folder:
             raise Exception("No test folder defined!")
         print("Start test")
@@ -203,7 +203,7 @@ class Environment():
         for index, item in enumerate(read_images_from_path(image_names)):
 
             img1d = item[region_of_interest[0]:region_of_interest[1], region_of_interest[2]:region_of_interest[3], 0:3].astype(float)/255
-            filename = image_names[index].split("\\")
+            filename = image_names[index].replace('\\', '/').split("/")
             filename = filename[len(filename)-1]
             car_state = dataframe[filename]
             user_steering = car_state[0][0]
@@ -259,9 +259,10 @@ class Environment():
                 axs.get_yaxis().get_major_formatter().labelOnlyBase = False
                 axs.get_xaxis().get_major_formatter().labelOnlyBase = False
 
-            #plt.show()
-
-            fig.savefig(os.path.join("output/plots", str(index) + "_" + filename))
+            if output_plots_folder:
+                fig.savefig(os.path.join(output_plots_folder, str(index) + "_" + filename))
+            else:
+                plt.show()
             plt.close()
             #break
 

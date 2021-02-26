@@ -126,7 +126,7 @@ class DeepLearningModel():
         #self.model = tf.keras.models.Model(inputs=model.input, outputs=layer_outputs) # Creates a model that will return these outputs, given the model input
 
     def load_model(self, model_name):
-        self._load_model(os.path.join(self.model_output_folder, model_name))
+        self._load_model(model_name)
 
     def get_latest_model_path(self):
         list_of_models = glob.glob(os.path.join(self.model_output_folder, self.MODEL_LOADING_REGEX))
