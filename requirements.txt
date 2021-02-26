@@ -1,0 +1,11 @@
+Pillow==6.0.0
+pandas==0.24.2
+keras==2.3.1
+opencv-python==4.1.0.25
+tensorflow==2.2.0
+msgpack-rpc-python==0.4.1
+airsim==1.2.4
+h5py==2.10.0
+numpy==1.19.5
+matplotlib==3.1.1
+pennylane==0.14.1

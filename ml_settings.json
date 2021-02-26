@@ -1,0 +1,36 @@
+{
+    "env_params": {
+        "ai_car_sim_ip": "127.0.0.3",
+        "ai_car_sim_port": 41451,
+        "model_training_folder": "output/models",
+        "model_processed_folder": "images/preprocessed/",
+        "model_output_folder": "output/tmp"
+    },
+    "model_params": {
+        "seed_number": 1,
+        "batch_size": 32,
+        "train_zero_drop_percentage": 0,
+        "val_zero_drop_percentage": 0,
+        "roi": [76, 135, 0, 255],
+        "activation_function": "relu",
+        "padding": "same",
+        "data_generator_horizontal_flip": false,
+        "data_generator_brighten_range": 0,
+        "learning_rate": 0.0001,
+        "beta_1": 0.9,
+        "beta_2": 0.999,
+        "epsilon": 1e-08,
+        "loss_function": "mse",
+        "monitored_quantity": "val_loss",
+        "plateau_factor": 0.5,
+        "plateau_patience": 10,
+        "plateau_min_learning_rate": 0.0000001,
+        "plateau_verbose": 1,
+        "early_stopping_patience": 30,
+        "early_stopping_min_delta": 0,
+        "model_training_epoche": 100,
+        "trainable": false,
+        "hybrid": true,
+        "qml_trainable": false
+    }
+}

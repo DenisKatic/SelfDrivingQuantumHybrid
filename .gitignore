@@ -1,0 +1,7 @@
+.idea/
+*.pyc
+images
+models
+output
+train
+venv
