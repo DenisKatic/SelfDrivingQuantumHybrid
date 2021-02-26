@@ -1,5 +1,4 @@
-# SelfDrivingQuantumHybrid
-Hybrid quantum-classical neural networks for self-driving cars
+# Hybrid quantum-classical neural networks for self-driving cars
 
 #Project description
 This project aims to test and evaluate the current capabilities of variational quantum circuits based
