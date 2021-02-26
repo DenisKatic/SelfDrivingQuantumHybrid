@@ -117,18 +117,18 @@ The qml_trainable parameters also defines, if the trainings weights of the train
 
 Command:
 ```
-python3.7 main.py --env_params env_settings.json --test_data_folder test --trained_quantum_circuits 
+python3.7 main.py --env_params env_settings.json --test_data_folder test_data --trained_quantum_circuits 
 trained_quantum_circuits.json --trained_quantum_circuits_index 1
 ```
 The use of the original_model parameter includes the classic ML in the test 
 ```
-python3.7 main.py --env_params env_settings.json --test_data_folder test --trained_quantum_circuits 
+python3.7 main.py --env_params env_settings.json --test_data_folder test_data --trained_quantum_circuits 
 trained_quantum_circuits.json --trained_quantum_circuits_index 1 --original_model 
 output/models/normal/top_model.46-0.0013866-0.0001746.h5 
 ```
 By adding the parameter plot_output_folder, the plots are saved in this folder and are no longer displayed 
 ```
-python3.7 main.py --env_params env_settings.json --test_data_folder test --trained_quantum_circuits 
+python3.7 main.py --env_params env_settings.json --test_data_folder test_data --trained_quantum_circuits 
 trained_quantum_circuits.json --trained_quantum_circuits_index 1 --original_model 
 output/models/normal/top_model.46-0.0013866-0.0001746.h5 --plot_output_folder output/plots
 ```
