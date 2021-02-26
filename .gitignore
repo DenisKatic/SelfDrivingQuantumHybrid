@@ -1,6 +1,6 @@
 .idea/
 *.pyc
-images
+training_images
 models
 output
 train

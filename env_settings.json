@@ -3,7 +3,7 @@
         "ai_car_sim_ip": "127.0.0.3",
         "ai_car_sim_port": 41451,
         "model_training_folder": "output/models",
-        "model_processed_folder": "images/preprocessed/",
+        "model_processed_folder": "training_images/preprocessed/",
         "model_output_folder": "output/tmp"
     },
     "model_params": {
