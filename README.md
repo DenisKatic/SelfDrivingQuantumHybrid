@@ -1,6 +1,6 @@
 # Hybrid quantum-classical neural networks for self-driving cars
 
-#Project description
+# Project description
 This project aims to test and evaluate the current capabilities of variational quantum circuits based
 on a hybrid ML approach, and a simplified and simulated version of a self-driving use case.
 
