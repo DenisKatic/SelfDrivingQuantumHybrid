@@ -1,7 +1,6 @@
 .idea/
 *.pyc
 training_images
-models
 output
 train
 venv
